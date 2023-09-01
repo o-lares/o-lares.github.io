@@ -9,100 +9,104 @@
 </head>
 
 <body>
-    <header>
+    <aside id="sidebar">
+        <img src="images/Me2.jpg" alt="OLare" id="profile-pic">
         <h1>Oscar Lares</h1><br>
         <h2>Graduate Research Assistant</h2><br>
         <p>oscar.lares@uga.edu or oscarelares@gmail.com | Phone: (404) 952-7607 | LinkedIn: https://www.linkedin.com/in/oscarelares/</p>
         <article>MS Civil Engineering, - University of Georgia, In progress - GPA: 3.66/4.0</article>
         <article>BS Mechanical Engineering - Kennesaw State University, 2019 - GPA: 3.78/4.0</article>
+        
         <section id="about-me">
             <h2>About Me</h2>
             <p>I am a passionate learner with experience in data analysis/science and machine learning </p>
         </section>
-    </header>
+    </aside>
 
-    <nav id="tabs">
-        <button data-tab-target="#work experience">Work Experience</button>
-        <button data-tab-target="#projects">Projects</button>
-        <button data-tab-target="#publications">Publications</button>
-        <button data-tab-target="#hobbies">Hobbies</button>
-    </nav>
+    <main id="main_content">
+        <nav id="tabs">
+            <button data-tab-target="#work experience">Work Experience</button>
+            <button data-tab-target="#projects">Projects</button>
+            <button data-tab-target="#publications">Publications</button>
+            <button data-tab-target="#hobbies">Hobbies</button>
+        </nav>
 
-    <section id="work experience" class="tab content">
-        <h2>Work Experience</h2>
-        <article>
-            <h3>Graduate Research Assistant</h3>
-            <h4>Smart Mobility and Infrastructure Lab (SMIL) at University of Georgia (UGA)<br/>January 2022 - Present</h4>
+        <section id="work experience" class="tab content">
+            <h2>Work Experience</h2>
+            <article>
+                <h3>Graduate Research Assistant</h3>
+                <h4>Smart Mobility and Infrastructure Lab (SMIL) at University of Georgia (UGA)<br/>January 2022 - Present</h4>
+                <ul>
+                    <li>Perform research related to mobility, traffic & transportation utilizing data to improve and increase domain knowledge</li>
+                    <li>Work closely with the Georgia Department of Transportation (GDOT) to update/improve their processes and use of traffic data</li>
+                    <li>Read, evaluate & write research papers & reports outlining research methods and findings</li>
+                    <li>Collaborate with other graduate students in our lab on various projects</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Associate Mechanical Engineer</h3>
+                <h4>L3Harris Technologies Inc. - Alpharetta, GA<br/>October 2019 - January 2022<br/><i>Full time position</i></h4>
+                <ul>
+                    <li>Develop & design military aircraft display systems with a focus on electronics packaging & structural
+                        design
+                    <li>Led several mechanical initiatives for part of the R&D for the Large Area Display (LAD) program as well as the Army Fifth Display System (AFDS) program</li>
+                    <li>Utilize Solidworks drafting & modeling skills to produce/modify production ready drawings</li>
+                </ul>
+                <h3>Mechanical Design Engineer</h3>
+                <h4>Cobb Industrial Fabricators<br/>August 2019 - October 2019<br/><i>Full-time contract</i></h4>
+                <ul>
+                    <li>Designed and created custom parts to customer specifications using 3D software and coordinating with manufacturing</li>
+                    <li>Handled multiple projects (4+) at once with a turnaround time of 2-3 weeks</li>
+                </ul>
+            </article>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>Traffic Crash Safety Analysis</h3>
+                <p>Compiled and cleaned and scraped data from 4 different sources to be used in modeling to assess traffic
+                    crash risk severity
+                    • Leveraged PCA and Ordinal Logistic Regression modeling to obtain insights on risk factors associated
+                    with crash severity</p>
+            </article>
+
+            <article>
+                <h3>Computer Vision Project</h3>
+                <p>Upload info from machine vision class</p>
+            </article>
+
+            <article>
+                <h3>Synergizing Multiple Source Traffic Data for QC - UGA</h3>
+                <p>Collaborated on building an end-to-end data pipeline for cleaning & modeling data
+                    • Worked on time-series modeling using various methods such as RNNs & TCNs for making traffic
+                    predictions
+                    • Applied and tested various methods for dealing with erroneous data coming from various sensors</p>
+            </article>
+
+            <article>
+                <h3>GDOT Lane Distribution Factor Project</h3>
+                <p>Collaborated on a project to update certain pavement design manual factors. Utilized two different models and compared results using both a 2 layer MLP model and a Logistic Regression model.What did you achieve? What tools or technologies did you use?</p>
+            </article>
+
+        </section>
+        <section id="publications">
+            <h2>Journal Publications</h2>
+            <p>(Under Review) Revisiting Lane Distribution Factors for Accurate Pavement Design: A Hierarchical Modeling Approach with Traffic Data Analysis in Georgia. Lares O., Tahaei, N., Yang, J. et al. Transporation Research Board (TRB), Manuscript Number: TRBAM-24-02820, 2023.</p>
+            <p>(Under Review) Unraveling the Dynamics of Single-Vehicle versus Multi-Vehicle Crashes: A Comparative Analysis Through Binary Classification. Zhen, H. Lares, O., Fortson, J., Yang, J., et. al, Transporation Research Board (TRB), Manuscript Number: TRBAM-24-05505, 2023.</p>
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies</h2>
             <ul>
-                <li>Perform research related to mobility, traffic & transportation utilizing data to improve and increase domain knowledge</li>
-                <li>Work closely with the Georgia Department of Transportation (GDOT) to update/improve their processes and use of traffic data</li>
-                <li>Read, evaluate & write research papers & reports outlining research methods and findings</li>
-                <li>Collaborate with other graduate students in our lab on various projects</li>
+                <li>Data Exploration/Analysis/Cleaning: Pandas, Numpy, Jupyter Notebook/Lab, Matplotlib, Seaborn, </li>
+                <li>Machine Learning/Deep Learning: Pytorch, Tensorflow, OpenCV, Sci-Kit Learn</li>
+                <li>Languages: Python, MATLAB, R, English, Spanish</li>
             </ul>
-        </article>
-        <article>
-            <h3>Associate Mechanical Engineer</h3>
-            <h4>L3Harris Technologies Inc. - Alpharetta, GA<br/>October 2019 - January 2022<br/><i>Full time position</i></h4>
-            <ul>
-                <li>Develop & design military aircraft display systems with a focus on electronics packaging & structural
-                    design
-                <li>Led several mechanical initiatives for part of the R&D for the Large Area Display (LAD) program as well as the Army Fifth Display System (AFDS) program</li>
-                <li>Utilize Solidworks drafting & modeling skills to produce/modify production ready drawings</li>
-            </ul>
-            <h3>Mechanical Design Engineer</h3>
-            <h4>Cobb Industrial Fabricators<br/>August 2019 - October 2019<br/><i>Full-time contract</i></h4>
-            <ul>
-                <li>Designed and created custom parts to customer specifications using 3D software and coordinating with manufacturing</li>
-                <li>Handled multiple projects (4+) at once with a turnaround time of 2-3 weeks</li>
-            </ul>
-        </article>
-    </section>
+        </section>
+    </main>  
     
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <article>
-            <h3>Traffic Crash Safety Analysis</h3>
-            <p>Compiled and cleaned and scraped data from 4 different sources to be used in modeling to assess traffic
-                crash risk severity
-                • Leveraged PCA and Ordinal Logistic Regression modeling to obtain insights on risk factors associated
-                with crash severity</p>
-        </article>
-
-        <article>
-            <h3>Computer Vision Project</h3>
-            <p>Upload info from machine vision class</p>
-        </article>
-
-        <article>
-            <h3>Synergizing Multiple Source Traffic Data for QC - UGA</h3>
-            <p>Collaborated on building an end-to-end data pipeline for cleaning & modeling data
-                • Worked on time-series modeling using various methods such as RNNs & TCNs for making traffic
-                predictions
-                • Applied and tested various methods for dealing with erroneous data coming from various sensors</p>
-        </article>
-
-        <article>
-            <h3>GDOT Lane Distribution Factor Project</h3>
-            <p>Collaborated on a project to update certain pavement design manual factors. Utilized two different models and compared results using both a 2 layer MLP model and a Logistic Regression model.What did you achieve? What tools or technologies did you use?</p>
-        </article>
-
-    </section>
-    <section id="publications">
-        <h2>Journal Publications</h2>
-        <p>(Under Review) Revisiting Lane Distribution Factors for Accurate Pavement Design: A Hierarchical Modeling Approach with Traffic Data Analysis in Georgia. Lares O., Tahaei, N., Yang, J. et al. Transporation Research Board (TRB), Manuscript Number: TRBAM-24-02820, 2023.</p>
-        <p>(Under Review) Unraveling the Dynamics of Single-Vehicle versus Multi-Vehicle Crashes: A Comparative Analysis Through Binary Classification. Zhen, H. Lares, O., Fortson, J., Yang, J., et. al, Transporation Research Board (TRB), Manuscript Number: TRBAM-24-05505, 2023.</p>
-    </section>
-
-    <section id="hobbies">
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Data Exploration/Analysis/Cleaning: Pandas, Numpy, Jupyter Notebook/Lab, Matplotlib, Seaborn, </li>
-            <li>Machine Learning/Deep Learning: Pytorch, Tensorflow, OpenCV, Sci-Kit Learn</li>
-            <li>Languages: Python, MATLAB, R, English, Spanish</li>
-        </ul>
-    </section>
-
-<script src="js/script.js"></script>      
+    <script src="js/script.js"></script>   
 </body>
 </html>
