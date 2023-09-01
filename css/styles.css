@@ -1,0 +1,76 @@
+/* Colors */
+:root {
+    --background-color: #1e1e1e;
+    --text-color: #e4e4e4;
+    --accent-color: #4169E1; /* Royal Blue */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font, you can change it as needed */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Adding smooth color transition */
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+header img {
+    border-radius: 50%; /* Making your image circular */
+    margin-right: 20px;
+    width: 100px; /* Adjust as needed */
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+section:hover {
+    background-color: #2e2e2e; /* Slightly lighter than the background */
+}
+
+/* If using FontAwesome or similar, you can style icons like this: */
+section i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+section:hover i {
+    transform: scale(1.1); /* Icon slightly enlarges on hover */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stacks items vertically */
+    }
+
+    header img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    /* Any other mobile-specific styles go here */
+}
