@@ -74,3 +74,23 @@ section:hover i {
     
     /* Any other mobile-specific styles go here */
 }
+
+/* Styling the tab buttons */
+#tabs button {
+    background: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#tabs button:hover {
+    background: #2e2e2e; /* Slightly lighter than the background */
+}
+
+/* By default, hide all tab content sections */
+.tab-content {
+    display: none;
+}
