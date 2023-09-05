@@ -18,12 +18,6 @@ body {
     color: var(--text-color);
 }
 
-/* General Styling */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: white;
-}
 
 body {
     display: flex;
@@ -38,6 +32,7 @@ body {
     flex: 1; /* This allows the main content to take up the remaining space */
     /* other styles for the main content... */
     margin-left: 300px; /* This makes space for the sidebar */
+    padding-left: 20px;
 }
 
 /* Sidebar Styling */
@@ -73,6 +68,7 @@ body {
     border: none;
     color: white;
     padding: 10px 20px;
+    margin: 0 -5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
