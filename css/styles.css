@@ -37,6 +37,7 @@ body {
 #main-content {
     flex: 1; /* This allows the main content to take up the remaining space */
     /* other styles for the main content... */
+    margin-left: 300px; /* This makes space for the sidebar */
 }
 
 /* Sidebar Styling */
