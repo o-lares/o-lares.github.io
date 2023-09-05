@@ -25,6 +25,20 @@ body {
     color: white;
 }
 
+body {
+    display: flex;
+}
+
+#sidebar {
+    flex: 0 0 250px; /* This sets the sidebar width to 250px; adjust as needed */
+    /* other styles for the sidebar... */
+}
+
+#main-content {
+    flex: 1; /* This allows the main content to take up the remaining space */
+    /* other styles for the main content... */
+}
+
 /* Sidebar Styling */
 #sidebar {
     position: fixed;
