@@ -23,14 +23,20 @@ body {
     display: flex;
 }
 
+body {
+    overflow-x: hidden; /* This hides any horizontal overflow, ensuring no horizontal scrollbar */
+}
+
 #sidebar {
     flex: 0 0 250px; /* This sets the sidebar width to 250px; adjust as needed */
+    width: 250px;
     /* other styles for the sidebar... */
 }
 
 #main-content {
     flex: 1; /* This allows the main content to take up the remaining space */
     /* other styles for the main content... */
+    max-width: calc(100% - 250px);
     margin-left: 300px; /* This makes space for the sidebar */
     padding-left: 20px;
 }
@@ -57,7 +63,6 @@ body {
 
 #tabs {
     display: flex;
-    justify-content: space-between;
     background-color: #1E1E1E;
     padding: 10px;
     border-bottom: 1px solid #333;
@@ -67,7 +72,7 @@ body {
     background: none;
     border: none;
     color: white;
-    padding: 10px 25px;
+    padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
