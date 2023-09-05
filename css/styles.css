@@ -68,7 +68,7 @@ body {
     border: none;
     color: white;
     padding: 10px 20px;
-    margin: 0 -5px;
+    margin: 0 -35px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
