@@ -136,11 +136,15 @@ body {
 .experience-logo {
     position: absolute;
     top: 50px;
+    bottom: 0;
     left: 0;
+    right: 0;
     width: auto;
-    height: 100%;
-    bottom: 0  /* Adjust based on your preference */
+    /* height: auto; */
     object-fit: cover;
+    margin: auto;
+    display: block;
+    transform: translateY(-50%);
 }
 
 .experience-detail {
