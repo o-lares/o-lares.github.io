@@ -127,10 +127,9 @@ body {
 .experience-logo {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);  /* Center the image horizontally */
-    height: 60%;  /* Adjust based on your preference */
-    width: auto;
+    left: 0;
+    width: 100%;
+    height: auto;  /* Adjust based on your preference */
 }
 
 .experience-detail {
