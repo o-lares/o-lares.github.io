@@ -136,9 +136,9 @@ body {
 .experience-logo {
     position: absolute;
     top: 50px;
-    /* bottom: 0;
+    bottom: 0;
     left: 0;
-    right: 0; */
+    right: 0;
     width: 100%;
     height: auto;
     /* height: auto; */
