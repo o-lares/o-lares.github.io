@@ -139,8 +139,7 @@ body {
     left: 0;
     width: 100%;
     height: calc(100% - 50px);
-    /* height: auto; */
-    object-fit: cover;
+    object-fit: contain; //changed from cover to contain
     display: block;
 }
 
