@@ -192,5 +192,5 @@ body {
 
 .card-content {
     padding: 10px;  /* Adjust padding as needed */
-    text-align: center; /* Or "left", "right" based on your design */
+    text-align: justify; /* Or "left", "right" based on your design */
 }
