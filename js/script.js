@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('#tabs button');
     const tabContents = document.querySelectorAll('.tab-content');
+    const cards = document.querySelectorAll('.experience-card');
+    const details = document.querySelectorAll('.experience-detail');
+    const closeButtons = document.querySelectorAll('.close-detail');
 
+    // Handle tab switching
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
             // Remove the active class from all tabs
@@ -16,6 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show the clicked tab's content
             const targetContent = document.querySelector(tab.getAttribute('data-tab-target'));
             targetContent.style.display = 'block';
+        });
+    });
+
+    // Show the detail when a card is clicked
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            const detailId = card.getAttribute('data-detail');
+            document.getElementById(detailId).style.display = 'block';
+        });
+    });
+
+    // Hide the detail when its close button is clicked
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const detail = button.closest('.experience-detail');
+            detail.style.display = 'none';
         });
     });
 });
