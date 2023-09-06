@@ -138,8 +138,8 @@ body {
     position: absolute;
     top: 50px;
     left: 0;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     bottom: 0  /* Adjust based on your preference */
     object-fit: cover;
 }
