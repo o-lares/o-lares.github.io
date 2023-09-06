@@ -124,7 +124,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #8e8585;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
@@ -133,7 +133,7 @@ body {
 }
 
 .close-detail {
-    background-color: red; /* adjust as needed */
+    background-color: rgb(97, 3, 3); /* adjust as needed */
     color: white;
     border: none;
     border-radius: 4px;
