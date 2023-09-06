@@ -48,9 +48,9 @@ body {
     left: 0;
     width: 300px; /* or whatever width you want */
     height: 100%;
-    background-color: #1E1E1E; /* A shade darker than body for a slight contrast */
+    background-color: #2c4182; /* A shade darker than body for a slight contrast */
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px #4169E1;
 }
 
 #profile-pic {
