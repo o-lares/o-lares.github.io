@@ -119,11 +119,14 @@ body {
 
 .card-text {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);  /* Center the text horizontally */
+    top: 10px;
+    left: 10px;
+    transform: none;  /* Center the text horizontally */
     background-color: #a8afbd;
-    align-items: left;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 2;
+    align-items: center;
 }
 
 .experience-logo {
@@ -131,7 +134,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: auto;  /* Adjust based on your preference */
+    height: 150px;  /* Adjust based on your preference */
     object-fit: cover;
 }
 
