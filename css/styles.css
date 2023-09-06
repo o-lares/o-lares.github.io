@@ -122,6 +122,8 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);  /* Center the text horizontally */
+    background-color: #a8afbd;
+    align-items: left;
 }
 
 .experience-logo {
