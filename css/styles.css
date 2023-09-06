@@ -136,8 +136,9 @@ body {
 .experience-logo {
     position: absolute;
     top: 60px;
-    width: auto;
-    height: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
     /* height: auto; */
     object-fit: cover;
     margin: auto;
