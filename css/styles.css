@@ -175,3 +175,22 @@ body {
     background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
     z-index: 1000; /* Ensure it's on top */
     display: none;
+}
+
+.card-header {
+    text-align: center;
+    padding: 10px;  /* Adjust padding as needed */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ccc;  /* Adjust color as needed */
+    margin: 10px 20px;  /* Vertical & horizontal margins */
+}
+
+.card-content {
+    padding: 10px;  /* Adjust padding as needed */
+    text-align: center; /* Or "left", "right" based on your design */
+}
