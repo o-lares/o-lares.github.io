@@ -13,7 +13,8 @@
 }
 
 body {
-    font-family: 'Roboto'; /* Modern font, you can change it as needed */
+    font-family: 'Roboto', sans-serif /* Modern font, you can change it as needed */
+    font-weight: 300;
     background-color: var(--background-color);
     color: var(--text-color);
 }
