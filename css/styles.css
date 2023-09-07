@@ -254,7 +254,11 @@ footer {
     margin: 0;
 }
 
-.footer-section p, .footer-section a {
+.footer-section a {
     margin: 0;
     vertical-align: middle;
+}
+
+.footer-section p {
+    margin-top: 5px;
 }
