@@ -212,10 +212,12 @@ body {
 
 /* Styling for the footer */
 footer {
+    background-color: lightgray;
     width: 100%;
     padding: 10px 0;
-    background-color: #333; /* or any color you prefer */
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* Styling for the LinkedIn icon */
@@ -232,4 +234,17 @@ footer {
 
 .content-wrapper {
     flex: 1;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    margin: 0;
 }
