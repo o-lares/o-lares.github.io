@@ -247,7 +247,7 @@ footer {
 .footer-section {
     flex: 1;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .footer-section h3 {
@@ -256,4 +256,5 @@ footer {
 
 .footer-section p, .footer-section a {
     margin: 0;
+    vertical-align: middle;
 }
