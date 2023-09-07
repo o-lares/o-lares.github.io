@@ -51,9 +51,9 @@ body {
     left: 0;
     width: 350px; /* or whatever width you want */
     height: 100%;
-    background-color: #53555a; /* A shade darker than body for a slight contrast */
+    background-color: #34495e; /* A shade darker than body for a slight contrast */
     padding: 20px;
-    box-shadow: 2px 0 5px #4169E1;
+    box-shadow: 2px 0 5px #2e56ce;
 }
 
 #sidebar i {
@@ -85,9 +85,9 @@ body {
 }
 
 #skills .skills-container span {
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: #34495e; 
     padding: 5px 10px; /* Adjust the padding as needed */
-    border: 1px solid #dee2e6; /* Light gray border */
+    border: 2px solid #dee2e6; /* Light gray border */
     border-radius: 4px; /* Optional: for rounded corners */
     font-size: 0.9em; /* Adjust the font size as needed */
 }
