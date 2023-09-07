@@ -224,7 +224,7 @@ footer {
     display: flex;
     justify-content: space-around; /* Adjusts spacing between sections */
     align-items: center;
-    max-width: 1200px; /* Adjust based on your preference */
+    max-width: 1500px; /* Adjust based on your preference */
     margin: 0 auto; /* Centers the container horizontally */
 }
 
