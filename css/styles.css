@@ -30,13 +30,6 @@ body {
     overflow-x: hidden; /* This hides any horizontal overflow, ensuring no horizontal scrollbar */
 }
 
-#sidebar {
-    flex: 0 0 350px; /* This sets the sidebar width to 250px; adjust as needed */
-    width: 350px;
-    overflow-y: auto;
-    /* other styles for the sidebar... */
-}
-
 #main-content {
     flex: 1; /* This allows the main content to take up the remaining space */
     /* other styles for the main content... */
@@ -50,12 +43,14 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 350px; /* or whatever width you want */
+    flex: 0 0 400px;
+    width: 400px; /* or whatever width you want */
     height: 100%;
     background-color: #34495e; /* A shade darker than body for a slight contrast */
     padding: 20px;
     box-shadow: 2px 0 5px #2e56ce;
-    font-size: 20px;
+    font-size: 18px;
+    overflow-y: auto;
 }
 
 #sidebar i {
@@ -65,7 +60,6 @@ body {
 #sidebar a {
     text-decoration: none; /*removes the underline from the link*/
     color: #e4e4e4;
-    font-size: 20px;
 }
 
 #sidebar a:hover {
@@ -100,6 +94,9 @@ body {
     background-color: #1E1E1E;
     padding: 10px;
     border-bottom: 1px solid #333;
+    font-family: 'Roboto';
+    font-weight: 200;
+    font-size: 18px;
 }
 
 .tab-button {
