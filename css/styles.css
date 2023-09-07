@@ -200,3 +200,9 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
+
+.sidebar i {
+    margin-right: 5px;
+    color:#718f76d5;
+    font-size: 12px;
+}
