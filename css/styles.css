@@ -56,6 +56,10 @@ body {
     box-shadow: 2px 0 5px #4169E1;
 }
 
+.sidebar i {
+    margin-right: 5px;
+}
+
 #profile-pic {
     width: 220px;
     height: auto;
@@ -200,8 +204,9 @@ body {
 
 .bio-header {
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
+    padding: 5px;
 }
 
 .sidebar i {
