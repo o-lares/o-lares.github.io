@@ -56,16 +56,16 @@ body {
     box-shadow: 2px 0 5px #4169E1;
 }
 
-.sidebar i {
+#sidebar i {
     margin-right: 5px;
 }
 
-.sidebar a {
+#sidebar a {
     text-decoration: none; /*removes the underline from the link*/
     color: #000;
 }
 
-.sidebar a:hover {
+#sidebar a:hover {
     text-decoration: underline;
     color: #005582;
 }
