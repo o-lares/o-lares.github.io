@@ -55,6 +55,7 @@ body {
     background-color: #34495e; /* A shade darker than body for a slight contrast */
     padding: 20px;
     box-shadow: 2px 0 5px #2e56ce;
+    font-size: 20px;
 }
 
 #sidebar i {
@@ -64,7 +65,7 @@ body {
 #sidebar a {
     text-decoration: none; /*removes the underline from the link*/
     color: #e4e4e4;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 #sidebar a:hover {
@@ -91,7 +92,7 @@ body {
     padding: 5px 10px; /* Adjust the padding as needed */
     border: 2px solid #dee2e6; /* Light gray border */
     border-radius: 4px; /* Optional: for rounded corners */
-    font-size: 0.9em; /* Adjust the font size as needed */
+    font-size: 18px; /* Adjust the font size as needed */
 }
 
 #tabs {
