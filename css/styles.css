@@ -30,6 +30,7 @@ body {
 #sidebar {
     flex: 0 0 350px; /* This sets the sidebar width to 250px; adjust as needed */
     width: 350px;
+    overflow-y: auto;
     /* other styles for the sidebar... */
 }
 
