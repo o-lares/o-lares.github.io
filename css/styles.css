@@ -13,8 +13,8 @@
 }
 
 body {
-    font-family: Roboto!important;
-    font-weight: 300;
+    font-family: 'Roboto';
+    font-weight: 400;
     background-color: var(--background-color);
     color: var(--text-color);
 }
