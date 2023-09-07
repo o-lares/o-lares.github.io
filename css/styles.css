@@ -207,3 +207,23 @@ body {
     color:#718f76d5;
     font-size: 12px;
 }
+
+/* Styling for the footer */
+footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #333; /* or any color you prefer */
+    text-align: center;
+}
+
+/* Styling for the LinkedIn icon */
+.linkedin-icon {
+    color: #0e76a8; /* LinkedIn's primary color */
+    font-size: 24px; /* Adjust size if necessary */
+    text-decoration: none; /* Removes the underline from the link */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.linkedin-icon:hover {
+    color: #005582; /* Darkened LinkedIn color on hover */
+}
