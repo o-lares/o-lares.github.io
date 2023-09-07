@@ -78,6 +78,20 @@ body {
     margin: 0 auto;
 }
 
+#skills .skills-container {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills .skills-container span {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 5px 10px; /* Adjust the padding as needed */
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 4px; /* Optional: for rounded corners */
+    font-size: 0.9em; /* Adjust the font size as needed */
+}
+
 #tabs {
     display: flex;
     background-color: #1E1E1E;
