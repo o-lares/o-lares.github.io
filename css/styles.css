@@ -285,6 +285,7 @@ body {
     align-items: center;
     margin: 5px;
     display: block;
+    border-radius: 10px;
 }
 
 .bio-header {
