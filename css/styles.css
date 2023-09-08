@@ -76,7 +76,7 @@ body {
 }
 
 .contact-info {
-    
+    padding: 5px;
 }
 
 .email i.fas, .phone i.fas, .github i.fab {
