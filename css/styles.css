@@ -200,7 +200,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 500px;
+    max-width: 650px;
     z-index: 1200;
 }
 
@@ -263,6 +263,7 @@ body {
     width: 300px;
     height: auto;
     justify-content: center;
+    align-items: center;
 }
 
 .bio-header {
