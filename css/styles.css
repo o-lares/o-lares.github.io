@@ -247,10 +247,21 @@ body {
     margin: 10px 20px;  /* Vertical & horizontal margins */
 }
 
+.sidebar-divider {
+    height: 1px;
+    background-color: #000000;  /* Adjust color as needed */
+    margin: 10px 20px;  /* Vertical & horizontal margins */
+}
+
 .card-content {
     padding: 10px;  /* Adjust padding as needed */
     text-align: justify; /* Or "left", "right" based on your design */
     color: #1E1E1E;
+}
+
+.project-picture {
+    width: 150px;
+    height: auto;
 }
 
 .bio-header {
