@@ -260,10 +260,12 @@ body {
 }
 
 .project-picture {
-    width: 300px;
+    width: 475px;
     height: auto;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    display: block;
 }
 
 .bio-header {
