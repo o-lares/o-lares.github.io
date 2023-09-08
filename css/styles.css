@@ -164,7 +164,17 @@ body {
 }
 
 .experience-card:hover {
-    background-color: #555; /* darker shade on hover */
+}
+
+.experience-card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* adjust color and opacity as needed */
+    pointer-events: none; /* this makes sure that content underneath can still be interacted with */
 }
 
 .experience-card:hover .card-text, 
@@ -209,7 +219,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 8000px;
+    max-width: 600px;
     z-index: 1200;
 }
 
@@ -298,7 +308,11 @@ body {
     margin: 5px;
     display: block;
     border-radius: 10px;
-    cursor: zoom-in;
+    cursor: default;
+}
+
+.project-picture.zoomable {
+    cursor: zoom-in; /* This will show the magnifying glass cursor only for zoomable images */
 }
 
 .zoom-overlay {
