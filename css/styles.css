@@ -141,6 +141,10 @@ body {
     display: block;
 }
 
+#main-content h2 {
+    color:#555;
+}
+
 .experience-card {
     width: 350px; /* adjust as needed */
     height: 250px; /* adjust as needed */
