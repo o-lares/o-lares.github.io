@@ -229,10 +229,12 @@ body {
     padding: 10px;  /* Adjust padding as needed */
     font-size: 20px; /* Adjust font size as needed */
     font-weight: bold;
+    color: #1E1E1E;
 }
 
 .card-subheader {
    text-align: center; 
+   color: #1E1E1E;
 }
 
 .card-skills {
@@ -241,7 +243,7 @@ body {
 
 .divider {
     height: 1px;
-    background-color: #ccc;  /* Adjust color as needed */
+    background-color: #000000;  /* Adjust color as needed */
     margin: 10px 20px;  /* Vertical & horizontal margins */
 }
 
