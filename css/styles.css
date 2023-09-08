@@ -75,6 +75,10 @@ body {
     margin: 0 auto;
 }
 
+.email i.fas, .phone i.fas, .github i.fab {
+    font-size: 20px; /* Adjust to your preference */
+}
+
 .education-hist {
     margin-left: 20px;;
 }
