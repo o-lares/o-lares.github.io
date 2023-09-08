@@ -148,7 +148,7 @@ body {
 .experience-card {
     width: 350px; /* adjust as needed */
     height: 250px; /* adjust as needed */
-    background-color: #e9d4c2; /* adjust color as needed */
+    background-color: #34495e; /* adjust color as needed */
     border: 3px solid #34495e;
     border-radius: 8px;
     margin: 10px;
@@ -204,7 +204,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 650px;
+    max-width: 800px;
     z-index: 1200;
 }
 
@@ -278,6 +278,13 @@ body {
     color: #1E1E1E;
 }
 
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
 .project-picture {
     width: 500px;
     height: auto;
@@ -286,6 +293,16 @@ body {
     margin: 5px;
     display: block;
     border-radius: 10px;
+}
+
+.table-picture {
+    width: 150px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    display: block;
+    border-radius: 5px;
 }
 
 .bio-header {
