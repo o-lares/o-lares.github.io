@@ -186,11 +186,11 @@ body {
 
 .experience-logo {
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     width: 100%;
-    height: calc(100% - 60px);
-    object-fit: cover; //changed from cover to contain
+    height: calc(100% - 50px);
+    object-fit: contain; //changed from cover to contain
     display: block;
 }
 
