@@ -57,22 +57,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-const zoomOverlay = document.createElement('div');
-    zoomOverlay.classList.add('zoom-overlay');
-    document.body.append(zoomOverlay);
-    
-    const zoomableImages = document.querySelectorAll('.project-picture.zoomable');
-    
-    zoomableImages.forEach(img => {
-        img.addEventListener('click', () => {
-            zoomOverlay.innerHTML = '';
-            const clone = img.cloneNode();
-            zoomOverlay.append(clone);
-            zoomOverlay.style.display = 'block';
-        });
-    });
+const zoomables = document.querySelectorAll('.zoomable');
+const zoomOverlay = document.querySelector('.zoom-overlay');
+const zoomOverlayImg = zoomOverlay.querySelector('img');
 
-    zoomOverlay.addEventListener('click', () => {
-        zoomOverlay.style.display = 'none';
+zoomables.forEach(zoomable => {
+    zoomable.addEventListener('click', function() {
+        zoomOverlayImg.src = zoomable.src;
+        zoomOverlay.style.display = 'flex';
     });
+});
+
+zoomOverlay.addEventListener('click', function() {
+    zoomOverlay.style.display = 'none';
 });
