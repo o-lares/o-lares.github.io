@@ -249,8 +249,14 @@ body {
 
 .sidebar-divider {
     height: 1px;
-    background-color: #000000;  /* Adjust color as needed */
+    background-color: #e4e4e4;  /* Adjust color as needed */
     margin: 10px 20px;  /* Vertical & horizontal margins */
+}
+
+.head-divider {
+    height: 2px;
+    background-color: #34495e;
+    margin: 10px 20px;
 }
 
 .card-content {
@@ -264,7 +270,7 @@ body {
     height: auto;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 5px;
     display: block;
 }
 
