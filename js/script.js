@@ -56,3 +56,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const zoomOverlay = document.createElement('div');
+    zoomOverlay.classList.add('zoom-overlay');
+    document.body.append(zoomOverlay);
+    
+    const zoomableImages = document.querySelectorAll('.project-picture.zoomable');
+    
+    zoomableImages.forEach(img => {
+        img.addEventListener('click', () => {
+            zoomOverlay.innerHTML = '';
+            const clone = img.cloneNode();
+            zoomOverlay.append(clone);
+            zoomOverlay.style.display = 'block';
+        });
+    });
+
+    zoomOverlay.addEventListener('click', () => {
+        zoomOverlay.style.display = 'none';
+    });
+});
