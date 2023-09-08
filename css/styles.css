@@ -190,7 +190,7 @@ body {
     left: 0;
     width: 100%;
     height: calc(100% - 60px);
-    object-fit: contain; //changed from cover to contain
+    object-fit: cover; //changed from cover to contain
     display: block;
 }
 
