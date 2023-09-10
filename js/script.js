@@ -72,10 +72,9 @@ zoomOverlay.addEventListener('click', function() {
     zoomOverlay.style.display = 'none';
 });
 
-backdrop.addEventListener('click', (event) => {
-    // This will check if the click event was directly on the backdrop (not on a child element)
-    if (event.target === backdrop) {
-        // Hide the modal
+// Hide the detail when the backdrop is clicked
+backdrop.addEventListener('click', function (e) {
+    if (e.target === backdrop) {
         details.forEach(detail => detail.style.display = 'none');
         
         // Hide the backdrop
