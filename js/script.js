@@ -71,3 +71,17 @@ zoomables.forEach(zoomable => {
 zoomOverlay.addEventListener('click', function() {
     zoomOverlay.style.display = 'none';
 });
+
+backdrop.addEventListener('click', (event) => {
+    // This will check if the click event was directly on the backdrop (not on a child element)
+    if (event.target === backdrop) {
+        // Hide the modal
+        details.forEach(detail => detail.style.display = 'none');
+        
+        // Hide the backdrop
+        backdrop.style.display = 'none';
+
+        // Restore scrolling on the body
+        document.body.style.overflow = 'auto';
+    }
+});
