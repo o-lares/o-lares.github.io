@@ -55,6 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         });
     });
+    // Hide the detail when the backdrop is clicked
+    backdrop.addEventListener('click', function () {
+        details.forEach(detail => detail.style.display = 'none');
+        
+        // Hide the backdrop
+        backdrop.style.display = 'none';
+
+        // Restore scrolling on the body
+        document.body.style.overflow = 'auto';
+    });
+
 });
 
 const zoomables = document.querySelectorAll('.zoomable');
@@ -70,17 +81,4 @@ zoomables.forEach(zoomable => {
 
 zoomOverlay.addEventListener('click', function() {
     zoomOverlay.style.display = 'none';
-});
-
-// Hide the detail when the backdrop is clicked
-backdrop.addEventListener('click', function (e) {
-    if (e.target === backdrop) {
-        details.forEach(detail => detail.style.display = 'none');
-        
-        // Hide the backdrop
-        backdrop.style.display = 'none';
-
-        // Restore scrolling on the body
-        document.body.style.overflow = 'auto';
-    }
 });
