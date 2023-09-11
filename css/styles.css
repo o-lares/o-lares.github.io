@@ -79,7 +79,16 @@ body {
     padding: 5px;
 }
 
-.email i.fas, .phone i.fas, .github i.fab .resume i.fas {
+.contact-info p {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    margin-right: 10px; /* Adjust the value as needed */
+}
+
+.email i.fas, .phone i.fas, .github i.fab, .resume i.fas {
     font-size: 20px; /* Adjust to your preference */
 }
 
