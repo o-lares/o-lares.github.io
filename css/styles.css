@@ -67,6 +67,10 @@ body {
     color: #005582;
 }
 
+#sidebar h2 {
+    padding: 10px;
+}
+
 #profile-pic {
     width: 220px;
     height: auto;
@@ -289,7 +293,7 @@ body {
 .sidebar-divider {
     height: 1px;
     background-color: #e4e4e4;  /* Adjust color as needed */
-    margin: 8px 20px;  /* Vertical & horizontal margins */
+    margin: 5px 20px;  /* Vertical & horizontal margins */
 }
 
 .head-divider {
