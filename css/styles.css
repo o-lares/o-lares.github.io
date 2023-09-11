@@ -82,6 +82,7 @@ body {
 .contact-info p {
     display: flex;
     align-items: center;
+    padding: 5px;
 }
 
 .contact-info p i {
