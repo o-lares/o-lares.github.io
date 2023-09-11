@@ -82,7 +82,7 @@ body {
 .contact-info p {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 3px;
 }
 
 .contact-info p i {
@@ -289,7 +289,7 @@ body {
 .sidebar-divider {
     height: 1px;
     background-color: #e4e4e4;  /* Adjust color as needed */
-    margin: 10px 20px;  /* Vertical & horizontal margins */
+    margin: 8px 20px;  /* Vertical & horizontal margins */
 }
 
 .head-divider {
@@ -356,7 +356,7 @@ body {
 
 .bio-header {
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     padding: 5px;
 }
