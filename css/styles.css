@@ -77,6 +77,7 @@
   --bs-link-hover-color: #15967d;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+  --resume-link-color: #ffffff;
 }
 
 *,
@@ -251,6 +252,14 @@ a {
 }
 a:hover {
   color: var(--bs-link-hover-color);
+}
+
+a.resume-link{
+  color: #ffffff;
+}
+
+a.resume-link:hover {
+  color: #141616; /* Light blue color on hover, specific to the resume link */
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
