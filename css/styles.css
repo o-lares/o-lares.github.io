@@ -11058,3 +11058,15 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.paper-link {
+  font-size: 110%;
+  color: #f0e3d5;
+  text-decoration: none; /* removes default underline */
+  transition: all 0.2s ease;
+}
+
+.paper-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
