@@ -90,6 +90,31 @@ main {
   gap: 18px;
 }
 
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -479,9 +504,83 @@ nav a {
     flex-direction: column;
   }
 
+  .site-header {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
   .header-actions {
-    align-items: flex-start;
-    flex-direction: column;
+    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    order: 2;
+  }
+
+  .theme-toggle {
+    order: 1;
+  }
+
+  .theme-toggle-text {
+    display: none;
+  }
+
+  nav {
+    position: absolute;
+    top: calc(100% - 8px);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: grid;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    border: 0 solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      max-height 180ms ease,
+      opacity 160ms ease,
+      border-width 160ms ease;
+  }
+
+  nav a {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .menu-open nav {
+    max-height: 420px;
+    border-width: 1px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .hero {

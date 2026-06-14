@@ -41,7 +41,18 @@ const navItems = [
     <header class="site-header">
       <a class="brand" href="/">{profile.name}</a>
       <div class="header-actions">
-        <nav aria-label="Primary navigation">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav id="primary-nav" aria-label="Primary navigation">
           {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
         </nav>
         <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
@@ -80,6 +91,25 @@ const navItems = [
         localStorage.setItem("theme", nextTheme);
         updateThemeLabel();
       });
+
+      const menuButton = document.querySelector(".menu-toggle");
+      const primaryNav = document.querySelector("#primary-nav");
+
+      function closeMenu() {
+        document.body.classList.remove("menu-open");
+        menuButton?.setAttribute("aria-expanded", "false");
+      }
+
+      menuButton?.addEventListener("click", () => {
+        const isOpen = document.body.classList.toggle("menu-open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      primaryNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      window.matchMedia("(min-width: 821px)").addEventListener("change", closeMenu);
     </script>
   </body>
 </html>
