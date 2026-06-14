@@ -28,6 +28,7 @@ const publications = (await getCollection("publications"))
       <p>{profile.summary}</p>
       <div class="actions">
         <a class="button" href="/projects">View Projects</a>
+        <a class="button secondary" href="#experience">View Experience</a>
         <a class="button secondary" href={profile.resume}>Download Resume</a>
         <a class="button secondary" href={`mailto:${profile.email}`}>Contact Me</a>
       </div>
@@ -58,7 +59,7 @@ const publications = (await getCollection("publications"))
     </div>
   </section>
 
-  <section class="section">
+  <section id="experience" class="section anchor-section">
     <div class="section-header">
       <div>
         <p class="eyebrow">Experience</p>
