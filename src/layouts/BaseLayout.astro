@@ -1,0 +1,85 @@
+---
+import "../styles/global.css";
+import { profile } from "../data/profile";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${profile.name} - Portfolio`,
+  description = profile.summary
+} = Astro.props;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/engineering", label: "Engineering" },
+  { href: "/writing", label: "Writing" },
+  { href: "/publications", label: "Publications" },
+  { href: "/about", label: "About" },
+  { href: "/resume", label: "Resume" }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = savedTheme ?? (prefersDark ? "dark" : "light");
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">{profile.name}</a>
+      <div class="header-actions">
+        <nav aria-label="Primary navigation">
+          {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-text">Theme</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>{profile.location}</p>
+      <div class="footer-links">
+        <a href={`mailto:${profile.email}`}>Email</a>
+        <a href={profile.github}>GitHub</a>
+        <a href={profile.linkedin}>LinkedIn</a>
+        <a href={profile.substack}>Substack</a>
+      </div>
+    </footer>
+    <script is:inline>
+      const themeButton = document.querySelector(".theme-toggle");
+      const themeText = document.querySelector(".theme-toggle-text");
+
+      function updateThemeLabel() {
+        const theme = document.documentElement.dataset.theme;
+        if (themeText) {
+          themeText.textContent = theme === "dark" ? "Dark" : "Light";
+        }
+      }
+
+      updateThemeLabel();
+      themeButton?.addEventListener("click", () => {
+        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem("theme", nextTheme);
+        updateThemeLabel();
+      });
+    </script>
+  </body>
+</html>

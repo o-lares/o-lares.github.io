@@ -1,0 +1,36 @@
+---
+interface Props {
+  company: string;
+  role: string;
+  dates: string;
+  image?: string;
+  highlights?: string[];
+  skills?: string[];
+}
+
+const { company, role, dates, image, highlights = [], skills = [] } = Astro.props;
+---
+
+<article class="experience-item">
+  {image && (
+    <div class="experience-logo-wrap">
+      <img class="experience-logo" src={image} alt={`${company} logo`} loading="lazy" />
+    </div>
+  )}
+  <div>
+    <p class="eyebrow">{dates}</p>
+    <h3>{role}</h3>
+    <p class="company">{company}</p>
+    <slot />
+    {highlights.length > 0 && (
+      <ul>
+        {highlights.map((highlight) => <li>{highlight}</li>)}
+      </ul>
+    )}
+    {skills.length > 0 && (
+      <ul class="tag-list" aria-label={`${company} skills`}>
+        {skills.map((skill) => <li>{skill}</li>)}
+      </ul>
+    )}
+  </div>
+</article>

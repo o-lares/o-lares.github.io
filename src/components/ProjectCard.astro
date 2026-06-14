@@ -1,0 +1,55 @@
+---
+interface LinkMap {
+  github?: string;
+  app?: string;
+  demo?: string;
+  article?: string;
+  paper?: string;
+  external?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  image?: string;
+  tech?: string[];
+  links?: LinkMap;
+  href?: string;
+}
+
+const { title, description, category, image, tech = [], links, href } = Astro.props;
+const linkEntries = Object.entries(links ?? {}).filter(([, url]) => Boolean(url));
+
+const linkLabels: Record<string, string> = {
+  github: "View GitHub",
+  app: "Open App",
+  demo: "View Demo",
+  article: "Read Article",
+  paper: "View Paper",
+  external: "Learn More"
+};
+---
+
+<article class="project-card">
+  {image && <img src={image} alt="" loading="lazy" />}
+  <div class="card-body">
+    <p class="eyebrow">{category}</p>
+    <h3>{href ? <a href={href}>{title}</a> : title}</h3>
+    <p>{description}</p>
+    {tech.length > 0 && (
+      <ul class="tag-list" aria-label={`${title} tech stack`}>
+        {tech.map((item) => <li>{item}</li>)}
+      </ul>
+    )}
+    {linkEntries.length > 0 && (
+      <div class="card-links">
+        {linkEntries.map(([label, url]) => (
+          <a class="button card-button" href={url}>
+            {linkLabels[label] ?? "Open Link"}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</article>

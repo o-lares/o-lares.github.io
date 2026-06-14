@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../data/profile";
+
+const articles = [
+  {
+    title: "A Little Synthetic Data Experiment",
+    description: "A first pass at exploring synthetic data generation and what it can teach us about modeling workflows.",
+    url: "https://open.substack.com/pub/oscarlab/p/a-little-synthetic-data-experiment?r=npsy6&utm_campaign=post&utm_medium=web",
+    tags: ["Synthetic Data", "Data Science", "Experiment"]
+  },
+  {
+    title: "A Slightly More Serious Synthetic Data Experiment",
+    description: "Teaching a model how to fake data, then thinking through what makes synthetic data useful or misleading.",
+    url: "https://open.substack.com/pub/oscarlab/p/a-slightly-more-serious-synthetic?r=npsy6&utm_campaign=post-expanded-share&utm_medium=web",
+    tags: ["Synthetic Data", "Modeling", "Applied AI"]
+  }
+];
+---
+
+<BaseLayout title="Writing - Oscar Lares">
+  <section class="section prose">
+    <p class="eyebrow">Writing</p>
+    <h1 class="page-title">Articles and project notes.</h1>
+    <p>
+      Substack articles, technical essays, project retrospectives, and applied AI notes that are less
+      formal than publications but still useful for recruiters, peers, and clients.
+    </p>
+    <div class="actions">
+      <a class="button" href={profile.substack}>Visit Substack</a>
+    </div>
+
+    <div class="writing-list">
+      {articles.map((article) => (
+        <article class="writing-card">
+          <p class="eyebrow">Substack</p>
+          <h2>{article.title}</h2>
+          <p>{article.description}</p>
+          <ul class="tag-list" aria-label={`${article.title} tags`}>
+            {article.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+          <div class="card-links">
+            <a class="button card-button" href={article.url}>Read Article</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

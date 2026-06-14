@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../data/profile";
+---
+
+<BaseLayout title="About - Oscar Lares">
+  <section class="section prose">
+    <p class="eyebrow">About</p>
+    <h1 class="page-title">Data science with an engineering-first mindset.</h1>
+    <p>
+      I am a Data Scientist with experience across applied machine learning, analytics engineering,
+      automation, and generative AI workflows. My background started in mechanical engineering, where I
+      worked on mechanical design, electronics packaging, thermal analysis, and validation for aerospace
+      systems.
+    </p>
+    <p>
+      That engineering foundation now shapes how I approach data science: build practical systems, test
+      assumptions, explain tradeoffs clearly, and keep the final workflow useful for the people who rely
+      on it.
+    </p>
+    <p>
+      My recent work includes automotive analytics, production ML pipelines, Snowflake/SQL data fusion,
+      MLflow deployment, Dataiku workflows, and GenAI tools built with AWS Bedrock.
+    </p>
+    <div class="actions">
+      <a class="button" href="/projects">View Projects</a>
+      <a class="button secondary" href={`mailto:${profile.email}`}>Contact Me</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+interface Publication {
+  data: {
+    venue: string;
+    title: string;
+    citation: string;
+    year: number;
+    link?: string;
+  };
+}
+
+interface Props {
+  publications: Publication[];
+}
+
+const { publications } = Astro.props;
+---
+
+<div class="publication-list">
+  {publications.map((publication) => (
+    <article>
+      <p class="eyebrow">{publication.data.venue} / {publication.data.year}</p>
+      <h3>{publication.data.title}</h3>
+      <p>{publication.data.citation}</p>
+      {publication.data.link && <a href={publication.data.link}>View publication</a>}
+    </article>
+  ))}
+</div>

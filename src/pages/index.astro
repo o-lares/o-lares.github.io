@@ -1,0 +1,118 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+import PublicationList from "../components/PublicationList.astro";
+import { profile } from "../data/profile";
+
+const projects = await getCollection("projects");
+const featuredProjects = projects
+  .filter((project) => project.data.featured)
+  .sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+const experience = (await getCollection("experience")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const publications = (await getCollection("publications"))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 4);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{profile.title}</p>
+      <h1>{profile.tagline}</h1>
+      <p>{profile.summary}</p>
+      <div class="actions">
+        <a class="button" href="/projects">View Projects</a>
+        <a class="button secondary" href={profile.resume}>Download Resume</a>
+        <a class="button secondary" href={`mailto:${profile.email}`}>Contact Me</a>
+      </div>
+    </div>
+    <img src={profile.headshot} alt="Oscar Lares" />
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Selected Work</p>
+        <h2>Featured Projects</h2>
+      </div>
+      <a href="/projects">All projects</a>
+    </div>
+    <div class="grid">
+      {featuredProjects.map((project) => (
+        <ProjectCard
+          title={project.data.title}
+          description={project.data.description}
+          category={project.data.category}
+          image={project.data.image}
+          tech={project.data.tech}
+          links={project.data.links}
+          href={`/projects/${project.slug}`}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Experience</p>
+        <h2>Selected Experience</h2>
+      </div>
+    </div>
+    <div class="experience-list">
+      {experience.map(async (item) => {
+        const { Content } = await item.render();
+        return (
+          <ExperienceItem
+            company={item.data.company}
+            role={item.data.role}
+            dates={item.data.dates}
+            image={item.data.image}
+            highlights={item.data.highlights}
+            skills={item.data.skills}
+          >
+            <Content />
+          </ExperienceItem>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Writing and Research</p>
+        <h2>Publications and Presentations</h2>
+      </div>
+      <a href="/publications">All publications</a>
+    </div>
+    <PublicationList publications={publications} />
+  </section>
+
+  <section class="section split-section">
+    <article class="feature-panel">
+      <p class="eyebrow">Engineering & Making</p>
+      <h2>3D printing, SolidWorks, and CAD design.</h2>
+      <p>
+        A future home for mechanical design work, 3D printing builds, CAD case studies, and fabrication notes.
+        This keeps the mechanical engineering side visible without crowding the main ML project archive.
+      </p>
+      <a class="button secondary" href="/engineering">View Engineering Work</a>
+    </article>
+    <article class="feature-panel">
+      <p class="eyebrow">Writing</p>
+      <h2>Articles, essays, and project notes.</h2>
+      <p>
+        A dedicated space for Substack links and longer-form writing about applied AI, analytics,
+        engineering, and technical projects.
+      </p>
+      <a class="button secondary" href="/writing">View Writing</a>
+    </article>
+  </section>
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../data/profile";
+---
+
+<BaseLayout title="Resume - Oscar Lares">
+  <section class="section prose">
+    <p class="eyebrow">Resume</p>
+    <h1 class="page-title">Resume and Contact</h1>
+    <p>
+      Download the current resume or reach out through email, GitHub, or LinkedIn.
+    </p>
+    <div class="actions">
+      <a class="button" href={profile.resume}>Download Resume</a>
+      <a class="button secondary" href={`mailto:${profile.email}`}>Email</a>
+      <a class="button secondary" href={profile.github}>GitHub</a>
+      <a class="button secondary" href={profile.linkedin}>LinkedIn</a>
+    </div>
+  </section>
+</BaseLayout>

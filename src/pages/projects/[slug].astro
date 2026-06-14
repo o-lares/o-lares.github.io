@@ -1,0 +1,77 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+const links = Object.entries(project.data.links ?? {}).filter(([, url]) => Boolean(url));
+const galleryImages = project.data.images;
+
+const linkLabels: Record<string, string> = {
+  github: "View GitHub",
+  app: "Open App",
+  demo: "View Demo",
+  article: "Read Article",
+  paper: "View Paper",
+  external: "Learn More"
+};
+---
+
+<BaseLayout title={`${project.data.title} - Oscar Lares`} description={project.data.description}>
+  <article class="section project-detail">
+    <p class="eyebrow">{project.data.category}</p>
+    <h1 class="page-title">{project.data.title}</h1>
+    <p class="section-intro">{project.data.description}</p>
+    <div class="detail-card">
+      {galleryImages.length > 0 && (
+        <div class={`project-gallery project-gallery-${project.data.galleryLayout}`}>
+          {galleryImages.map((image, index) => (
+            <img src={image} alt="" loading={index === 0 ? "eager" : "lazy"} />
+          ))}
+        </div>
+      )}
+      <div class="detail-section">
+        <h2>Overview</h2>
+        <Content />
+      </div>
+
+      {project.data.highlights.length > 0 && (
+        <div class="detail-section">
+          <h2>{project.data.highlightLabel}</h2>
+          <ul class="tag-list detail-tags highlight-tags">
+            {project.data.highlights.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      )}
+
+      {(project.data.proficiency.length > 0 || project.data.tech.length > 0) && (
+        <div class="detail-section">
+          <h2>Skills & Proficiencies</h2>
+          <ul class="tag-list detail-tags">
+            {(project.data.proficiency.length > 0 ? project.data.proficiency : project.data.tech).map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {links.length > 0 && (
+        <div class="detail-links">
+          {links.map(([label, url]) => (
+            <a class="button detail-button" href={url}>
+              {linkLabels[label] ?? "Open Link"}
+            </a>
+          ))}
+        </div>
+      )}
+      </div>
+  </article>
+</BaseLayout>

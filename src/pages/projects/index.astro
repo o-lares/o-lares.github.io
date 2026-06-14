@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => Date.parse(b.data.date) - Date.parse(a.data.date)
+);
+
+const categoryOrder = [
+  "Professional Analytics & ML/AI",
+  "Transportation Research",
+  "Software and AI Builds"
+];
+
+const categories = categoryOrder.filter((category) =>
+  projects.some((project) => project.data.category === category)
+);
+---
+
+<BaseLayout title="Projects - Oscar Lares">
+  <section class="section">
+    <p class="eyebrow">Project Archive</p>
+    <h1 class="page-title">Projects</h1>
+    <p class="section-intro">
+      A full archive of professional analytics and ML/AI systems, transportation research, software builds, and computer vision projects.
+    </p>
+  </section>
+
+  {categories.map((category) => (
+    <section class="section">
+      <div class="section-header">
+        <h2>{category}</h2>
+      </div>
+      <div class="grid">
+        {projects
+          .filter((project) => project.data.category === category)
+          .map((project) => (
+            <ProjectCard
+              title={project.data.title}
+              description={project.data.description}
+              category={project.data.category}
+              image={project.data.image}
+              tech={project.data.tech}
+              links={project.data.links}
+              href={`/projects/${project.slug}`}
+            />
+          ))}
+      </div>
+    </section>
+  ))}
+</BaseLayout>
